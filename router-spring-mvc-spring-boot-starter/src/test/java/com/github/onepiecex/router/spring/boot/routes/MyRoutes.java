@@ -13,6 +13,7 @@ package com.github.onepiecex.router.spring.boot.routes;
 
 import com.github.onepiecex.router.core.route.Router;
 import com.github.onepiecex.router.core.route.Routes;
+import com.github.onepiecex.router.spring.boot.controllers.HelloController;
 
 /**
  * Created by xiong on 2017-07-14.
@@ -20,6 +21,7 @@ import com.github.onepiecex.router.core.route.Routes;
 public class MyRoutes implements Routes {
     @Override
     public void init(Router router) {
-
+        router.route("/hello").GET(HelloController::hello);
+        router.route("/hello2").GET(HelloController::hello);
     }
 }

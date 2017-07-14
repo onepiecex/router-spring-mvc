@@ -1,5 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 com.github.onepiecex.router.spring.boot.starter.SpringRouterConfig
-
-org.springframework.context.ApplicationListener=\
-com.github.onepiecex.router.core.event.ReadyEvent

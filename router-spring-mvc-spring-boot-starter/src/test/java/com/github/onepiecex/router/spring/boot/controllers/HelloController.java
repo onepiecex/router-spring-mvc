@@ -9,14 +9,13 @@
  *  with meicanyun.com.
  */
 
-package com.github.onepiecex.router.core.route;
-
-import java.util.List;
+package com.github.onepiecex.router.spring.boot.controllers;
 
 /**
  * Created by xiong on 2017-07-14.
  */
-public interface RouteBuilder extends RouteBuilderWithControllerMethod<RouteBuilder> {
-
-    List<Route> getRoutes();
+public class HelloController {
+    public String hello() {
+        return "hello";
+    }
 }

@@ -27,70 +27,23 @@ public class RouteBuilderImpl implements RouteBuilder {
     private String[] paths;
 
     public RouteBuilderImpl(String path) {
-        this.paths = path.split("||");
+        this.paths = path.split("\\|\\|");
     }
 
-    private Route route(ControllerMethods.ControllerMethod controllerMethod,RequestMethod... requestMethod){
+    @Override
+    public List<Route> getRoutes() {
+        return routes;
+    }
+
+
+    @Override
+    public RouteBuilder METHOD(ControllerMethods.ControllerMethod controllerMethod, RequestMethod... requestMethod) {
         LambdaRoute lambdaRoute = LambdaRoute.resolve(controllerMethod);
         Method functionalMethod = lambdaRoute.getFunctionalMethod();
 
         Class<?> declaringClass = functionalMethod.getDeclaringClass();
         Route route = new Route(declaringClass, functionalMethod, "", paths, requestMethod, new String[0], new String[0], new String[0], new String[0]);
         routes.add(route);
-        return route;
-    }
-
-    @Override
-    public RouteBuilder GET(ControllerMethods.ControllerMethod controllerMethod) {
-        Route route = this.route(controllerMethod, RequestMethod.GET);
-        this.routes.add(route);
         return this;
-    }
-
-    @Override
-    public RouteBuilder POST(ControllerMethods.ControllerMethod controllerMethod) {
-        Route route = this.route(controllerMethod, RequestMethod.POST);
-        this.routes.add(route);
-        return this;
-    }
-
-    @Override
-    public RouteBuilder PUT(ControllerMethods.ControllerMethod controllerMethod) {
-        Route route = this.route(controllerMethod, RequestMethod.PUT);
-        this.routes.add(route);
-        return this;
-    }
-
-    @Override
-    public RouteBuilder DELETE(ControllerMethods.ControllerMethod controllerMethod) {
-        Route route = this.route(controllerMethod, RequestMethod.DELETE);
-        this.routes.add(route);
-        return this;
-    }
-
-    @Override
-    public RouteBuilder OPTIONS(ControllerMethods.ControllerMethod controllerMethod) {
-        Route route = this.route(controllerMethod, RequestMethod.OPTIONS);
-        this.routes.add(route);
-        return this;
-    }
-
-    @Override
-    public RouteBuilder HEAD(ControllerMethods.ControllerMethod controllerMethod) {
-        Route route = this.route(controllerMethod, RequestMethod.HEAD);
-        this.routes.add(route);
-        return this;
-    }
-
-    @Override
-    public RouteBuilder METHOD(ControllerMethods.ControllerMethod controllerMethod, RequestMethod... requestMethod) {
-        Route route = this.route(controllerMethod, requestMethod);
-        this.routes.add(route);
-        return this;
-    }
-
-    @Override
-    public List<Route> getRoutes() {
-        return routes;
     }
 }
