@@ -10,6 +10,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface RouteBuilderWithControllerMethod<T> {
     /**
      * @param controllerMethod   see ControllerMethods.of(CLASS::METHOD)
+     *   注 ：
+     *       name,params, headers,consumes, produces
+     *     这些参数可以在    Controller 或    Controller.Method
+     *     加注解 下面注解
+     * @see RouteMapping
      * @return
      */
     T METHOD(ControllerMethod controllerMethod, RequestMethod[] requestMethod,
