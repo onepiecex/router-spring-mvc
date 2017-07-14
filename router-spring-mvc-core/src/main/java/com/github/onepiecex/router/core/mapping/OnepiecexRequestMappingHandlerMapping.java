@@ -76,6 +76,12 @@ public class OnepiecexRequestMappingHandlerMapping extends RequestMappingHandler
             return;
         }
 
+        mappingName = this.def(mappingName, "");
+        params = this.def(params,new String[0]);
+        headers = this.def(headers,new String[0]);
+        consumes = this.def(consumes,new String[0]);
+        produces = this.def(produces,new String[0]);
+
         RequestMapping requestMapping=new OnepiecexRequestMapping(mappingName,path,path,requestMethods,params,headers,consumes,produces);
         RequestMappingInfo build = super.createRequestMappingInfo(requestMapping, null);
         final Class<?> userType = ClassUtils.getUserClass(handler);
@@ -94,5 +100,11 @@ public class OnepiecexRequestMappingHandlerMapping extends RequestMappingHandler
 
     }
 
+    private <V> V def(V t,V t2){
+        if(t!=null){
+            return t;
+        }
+        return t2;
+    }
 
 }

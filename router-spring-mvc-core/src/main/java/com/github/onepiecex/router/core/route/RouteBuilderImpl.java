@@ -39,13 +39,27 @@ public class RouteBuilderImpl implements RouteBuilder {
 
 
     @Override
-    public RouteBuilder METHOD(ControllerMethods.ControllerMethod controllerMethod, RequestMethod... requestMethod) {
+    public RouteBuilder METHOD(ControllerMethods.ControllerMethod controllerMethod, RequestMethod[] requestMethod, String name, String[] params, String[] headers, String[] consumes, String[] produces) {
         LambdaRoute lambdaRoute = LambdaRoute.resolve(controllerMethod);
         Method functionalMethod = lambdaRoute.getFunctionalMethod();
-
         Class<?> declaringClass = functionalMethod.getDeclaringClass();
-        Route route = new Route(declaringClass, functionalMethod, "", paths, requestMethod, new String[0], new String[0], new String[0], new String[0]);
+
+        RouteMapping annotation = functionalMethod.getAnnotation(RouteMapping.class);
+        if (annotation == null) {
+            annotation=declaringClass.getAnnotation(RouteMapping.class);
+        }
+
+        if(annotation!=null){
+            name=annotation.name();
+            params=annotation.params();
+            headers=annotation.headers();
+            consumes=annotation.consumes();
+            produces=annotation.produces();
+        }
+
+        Route route = new Route(declaringClass, functionalMethod, name, params, requestMethod, params, headers, consumes, produces);
         routes.add(route);
         return this;
     }
+
 }
