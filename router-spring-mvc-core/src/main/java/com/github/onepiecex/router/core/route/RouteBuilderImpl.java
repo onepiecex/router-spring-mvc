@@ -27,7 +27,9 @@ public class RouteBuilderImpl implements RouteBuilder {
     private String[] paths;
 
     public RouteBuilderImpl(String path) {
-        this.paths = path.split("\\|\\|");
+        if(path!=null && path.length()>0) {
+            this.paths = path.split("\\|\\|");
+        }
     }
 
     @Override
