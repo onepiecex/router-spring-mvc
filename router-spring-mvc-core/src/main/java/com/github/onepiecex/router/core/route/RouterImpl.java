@@ -20,9 +20,11 @@ import java.util.List;
 public class RouterImpl implements Router {
     private List<RouteBuilder> routeBuilders=new ArrayList<>();
     @Override
-    public RouteBuilder route(String path) {
+    public RouteBuilder route(boolean condition,String path) {
         RouteBuilder routeBuilder=new RouteBuilderImpl(path);
-        routeBuilders.add(routeBuilder);
+        if(condition) {
+            routeBuilders.add(routeBuilder);
+        }
         return routeBuilder;
     }
 

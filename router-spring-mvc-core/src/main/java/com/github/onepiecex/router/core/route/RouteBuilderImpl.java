@@ -39,7 +39,10 @@ public class RouteBuilderImpl implements RouteBuilder {
 
 
     @Override
-    public RouteBuilder METHOD(ControllerMethods.ControllerMethod controllerMethod, RequestMethod[] requestMethod, String name, String[] params, String[] headers, String[] consumes, String[] produces) {
+    public RouteBuilder METHOD(boolean condition,ControllerMethods.ControllerMethod controllerMethod, RequestMethod[] requestMethod, String name, String[] params, String[] headers, String[] consumes, String[] produces) {
+        if(!condition){
+            return this;
+        }
         LambdaRoute lambdaRoute = LambdaRoute.resolve(controllerMethod);
         Method functionalMethod = lambdaRoute.getFunctionalMethod();
         Class<?> declaringClass = functionalMethod.getDeclaringClass();

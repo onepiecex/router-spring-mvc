@@ -21,7 +21,11 @@ import com.github.onepiecex.router.spring.boot.controllers.HelloController;
 public class MyRoutes implements Routes {
     @Override
     public void init(Router router) {
-        router.route("/hello").GET(HelloController::hello);
-        router.route("/hello2").GET(HelloController::hello);
+        router.route("/hello")
+                .GET(HelloController::hello)
+                .when(true,routeBuilder -> routeBuilder.POST(HelloController::hello))
+                .PUT(true,HelloController::hello);
+
+        router.route(true,"/hello2").GET(HelloController::hello);
     }
 }

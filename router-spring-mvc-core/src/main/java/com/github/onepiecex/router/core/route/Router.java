@@ -19,9 +19,18 @@ import java.util.List;
 public interface Router {
     /**
      *
+     * @param condition 当condition 为true时才加入路由 为开发 测试变换路由使用
      * @param path 地址  多个地址用||分割
      * @return
      */
-    RouteBuilder route(String path);
+    RouteBuilder route(boolean condition,String path);
+    /**
+     *
+     * @param path 地址  多个地址用||分割
+     * @return
+     */
+    default RouteBuilder route(String path){
+        return route(true,path);
+    }
     List<Route> getRoutes();
 }
