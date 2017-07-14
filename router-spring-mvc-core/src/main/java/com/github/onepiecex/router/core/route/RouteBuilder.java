@@ -26,6 +26,8 @@ public interface RouteBuilder extends RouteBuilderWithControllerMethod<RouteBuil
         RouteBuilderWithDELETEControllerMethod<RouteBuilder>,
         RouteBuilderWithHEADControllerMethod<RouteBuilder>,
         RouteBuilderWithOPTIONSControllerMethod<RouteBuilder>,
+        RouteBuilderWithPATCHControllerMethod<RouteBuilder>,
+        RouteBuilderWithTRACEControllerMethod<RouteBuilder>,
         RouteBuilderWithMETHODControllerMethod<RouteBuilder>{
 
     default RouteBuilder when(boolean condition,Consumer<RouteBuilder> consumer){
