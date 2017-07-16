@@ -12,6 +12,7 @@
 package com.github.onepiecex.router.core.route;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 /**
  * Created by xiong on 2017-07-14.
@@ -31,6 +32,12 @@ public interface Router {
      */
     default RouteBuilder route(String path){
         return route(true,path);
+    }
+    default Router when(boolean condition,Consumer<Router> consumer){
+        if(condition) {
+            consumer.accept(this);
+        }
+        return this;
     }
     List<Route> getRoutes();
 }
