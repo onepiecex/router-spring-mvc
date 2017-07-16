@@ -64,46 +64,46 @@ public interface RouteBuilderWithTRACEControllerMethod<T> extends RouteBuilderWi
     }
     default T TRACE(boolean condition, ControllerMethod0 controllerMethod) {
 
-        return METHOD(true,(ControllerMethod)controllerMethod, RequestMethod.TRACE);
+        return METHOD(condition,(ControllerMethod)controllerMethod, RequestMethod.TRACE);
     }
 
     default <A> T TRACE(boolean condition, ControllerMethod1<A> controllerMethod) {
-        return METHOD(true,(ControllerMethod)controllerMethod,RequestMethod.TRACE);
+        return METHOD(condition,(ControllerMethod)controllerMethod,RequestMethod.TRACE);
     }
 
     default <A,B> T TRACE(boolean condition, ControllerMethod2<A, B> controllerMethod) {
-        return METHOD(true,(ControllerMethod)controllerMethod,RequestMethod.TRACE);
+        return METHOD(condition,(ControllerMethod)controllerMethod,RequestMethod.TRACE);
     }
 
     default <A,B,C> T TRACE(boolean condition, ControllerMethod3<A, B, C> controllerMethod) {
-        return METHOD(true,(ControllerMethod)controllerMethod,RequestMethod.TRACE);
+        return METHOD(condition,(ControllerMethod)controllerMethod,RequestMethod.TRACE);
     }
 
     default <A,B,C,D> T TRACE(boolean condition, ControllerMethod4<A, B, C, D> controllerMethod) {
-        return METHOD(true,(ControllerMethod)controllerMethod,RequestMethod.TRACE);
+        return METHOD(condition,(ControllerMethod)controllerMethod,RequestMethod.TRACE);
     }
 
     default <A,B,C,D,E> T TRACE(boolean condition, ControllerMethod5<A, B, C, D, E> controllerMethod) {
-        return METHOD(true,(ControllerMethod)controllerMethod,RequestMethod.TRACE);
+        return METHOD(condition,(ControllerMethod)controllerMethod,RequestMethod.TRACE);
     }
 
     default <A,B,C,D,E,F> T TRACE(boolean condition, ControllerMethod6<A, B, C, D, E, F> controllerMethod) {
-        return METHOD(true,(ControllerMethod)controllerMethod,RequestMethod.TRACE);
+        return METHOD(condition,(ControllerMethod)controllerMethod,RequestMethod.TRACE);
     }
 
     default <A,B,C,D,E,F,G> T TRACE(boolean condition, ControllerMethod7<A, B, C, D, E, F, G> controllerMethod) {
-        return METHOD(true,(ControllerMethod)controllerMethod,RequestMethod.TRACE);
+        return METHOD(condition,(ControllerMethod)controllerMethod,RequestMethod.TRACE);
     }
 
     default <A,B,C,D,E,F,G,H> T TRACE(boolean condition, ControllerMethod8<A, B, C, D, E, F, G, H> controllerMethod) {
-        return METHOD(true,(ControllerMethod)controllerMethod,RequestMethod.TRACE);
+        return METHOD(condition,(ControllerMethod)controllerMethod,RequestMethod.TRACE);
     }
 
     default <A,B,C,D,E,F,G,H,I> T TRACE(boolean condition, ControllerMethod9<A, B, C, D, E, F, G, H, I> controllerMethod) {
-        return METHOD(true,(ControllerMethod)controllerMethod,RequestMethod.TRACE);
+        return METHOD(condition,(ControllerMethod)controllerMethod,RequestMethod.TRACE);
     }
 
     default <A,B,C,D,E,F,G,H,I,J> T TRACE(boolean condition, ControllerMethod10<A, B, C, D, E, F, G, H, I, J> controllerMethod) {
-        return METHOD(true,(ControllerMethod)controllerMethod,RequestMethod.TRACE);
+        return METHOD(condition,(ControllerMethod)controllerMethod,RequestMethod.TRACE);
     }
 }

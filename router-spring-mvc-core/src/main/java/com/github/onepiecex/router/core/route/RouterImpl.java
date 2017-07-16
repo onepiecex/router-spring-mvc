@@ -13,19 +13,33 @@ package com.github.onepiecex.router.core.route;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 /**
  * Created by xiong on 2017-07-14.
  */
 public class RouterImpl implements Router {
     private List<RouteBuilder> routeBuilders=new ArrayList<>();
+    private String startPath="";
+
     @Override
     public RouteBuilder route(boolean condition,String path) {
-        RouteBuilder routeBuilder=new RouteBuilderImpl(path);
+        RouteBuilder routeBuilder=new RouteBuilderImpl(startPath+path);
         if(condition) {
             routeBuilders.add(routeBuilder);
         }
         return routeBuilder;
+    }
+
+    @Override
+    public Router route(boolean condition, String path, Consumer<Router> consumer) {
+        if(condition) {
+            String oldStartPath=this.startPath;
+            this.startPath=this.startPath+path;
+            consumer.accept(this);
+            this.startPath=oldStartPath;
+        }
+        return this;
     }
 
     @Override
@@ -36,4 +50,5 @@ public class RouterImpl implements Router {
         }
         return routes;
     }
+
 }

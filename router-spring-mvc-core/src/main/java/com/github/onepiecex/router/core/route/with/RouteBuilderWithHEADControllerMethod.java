@@ -64,46 +64,46 @@ public interface RouteBuilderWithHEADControllerMethod<T> extends RouteBuilderWit
         return METHOD((ControllerMethod)controllerMethod,RequestMethod.HEAD);
     }
     default T HEAD(boolean condition,ControllerMethod0 controllerMethod) {
-        return METHOD(true,(ControllerMethod)controllerMethod,RequestMethod.HEAD);
+        return METHOD(condition,(ControllerMethod)controllerMethod,RequestMethod.HEAD);
     }
 
     default <A> T HEAD(boolean condition, ControllerMethod1<A> controllerMethod) {
-        return METHOD(true,(ControllerMethod)controllerMethod,RequestMethod.HEAD);
+        return METHOD(condition,(ControllerMethod)controllerMethod,RequestMethod.HEAD);
     }
 
     default <A,B> T HEAD(boolean condition, ControllerMethod2<A, B> controllerMethod) {
-        return METHOD(true,(ControllerMethod)controllerMethod,RequestMethod.HEAD);
+        return METHOD(condition,(ControllerMethod)controllerMethod,RequestMethod.HEAD);
     }
 
     default <A,B,C> T HEAD(boolean condition, ControllerMethod3<A, B, C> controllerMethod) {
-        return METHOD(true,(ControllerMethod)controllerMethod,RequestMethod.HEAD);
+        return METHOD(condition,(ControllerMethod)controllerMethod,RequestMethod.HEAD);
     }
 
     default <A,B,C,D> T HEAD(boolean condition, ControllerMethod4<A, B, C, D> controllerMethod) {
-        return METHOD(true,(ControllerMethod)controllerMethod,RequestMethod.HEAD);
+        return METHOD(condition,(ControllerMethod)controllerMethod,RequestMethod.HEAD);
     }
 
     default <A,B,C,D,E> T HEAD(boolean condition, ControllerMethod5<A, B, C, D, E> controllerMethod) {
-        return METHOD(true,(ControllerMethod)controllerMethod,RequestMethod.HEAD);
+        return METHOD(condition,(ControllerMethod)controllerMethod,RequestMethod.HEAD);
     }
 
     default <A,B,C,D,E,F> T HEAD(boolean condition, ControllerMethod6<A, B, C, D, E, F> controllerMethod) {
-        return METHOD(true,(ControllerMethod)controllerMethod,RequestMethod.HEAD);
+        return METHOD(condition,(ControllerMethod)controllerMethod,RequestMethod.HEAD);
     }
 
     default <A,B,C,D,E,F,G> T HEAD(boolean condition, ControllerMethod7<A, B, C, D, E, F, G> controllerMethod) {
-        return METHOD(true,(ControllerMethod)controllerMethod,RequestMethod.HEAD);
+        return METHOD(condition,(ControllerMethod)controllerMethod,RequestMethod.HEAD);
     }
 
     default <A,B,C,D,E,F,G,H> T HEAD(boolean condition, ControllerMethod8<A, B, C, D, E, F, G, H> controllerMethod) {
-        return METHOD(true,(ControllerMethod)controllerMethod,RequestMethod.HEAD);
+        return METHOD(condition,(ControllerMethod)controllerMethod,RequestMethod.HEAD);
     }
 
     default <A,B,C,D,E,F,G,H,I> T HEAD(boolean condition, ControllerMethod9<A, B, C, D, E, F, G, H, I> controllerMethod) {
-        return METHOD(true,(ControllerMethod)controllerMethod,RequestMethod.HEAD);
+        return METHOD(condition,(ControllerMethod)controllerMethod,RequestMethod.HEAD);
     }
 
     default <A,B,C,D,E,F,G,H,I,J> T HEAD(boolean condition, ControllerMethod10<A, B, C, D, E, F, G, H, I, J> controllerMethod) {
-        return METHOD(true,(ControllerMethod)controllerMethod,RequestMethod.HEAD);
+        return METHOD(condition,(ControllerMethod)controllerMethod,RequestMethod.HEAD);
     }
 }
