@@ -14,7 +14,6 @@ package com.github.onepiecex.router.core.route;
 import com.github.onepiecex.router.core.route.with.*;
 
 import java.util.List;
-import java.util.function.Consumer;
 
 /**
  * Created by xiong on 2017-07-14.
@@ -30,11 +29,5 @@ public interface RouteBuilder extends RouteBuilderWithControllerMethod<RouteBuil
         RouteBuilderWithTRACEControllerMethod<RouteBuilder>,
         RouteBuilderWithMETHODControllerMethod<RouteBuilder>{
 
-    default RouteBuilder when(boolean condition,Consumer<RouteBuilder> consumer){
-        if(condition) {
-            consumer.accept(this);
-        }
-        return this;
-    }
     List<Route> getRoutes();
 }
