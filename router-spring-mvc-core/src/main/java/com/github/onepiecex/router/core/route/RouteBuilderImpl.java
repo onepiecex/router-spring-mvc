@@ -60,7 +60,7 @@ public class RouteBuilderImpl implements RouteBuilder {
             produces=annotation.produces();
         }
 
-        Route route = new Route(declaringClass, functionalMethod, name, params, requestMethod, params, headers, consumes, produces);
+        Route route = new Route(declaringClass, functionalMethod, name, paths, requestMethod, params, headers, consumes, produces);
         routes.add(route);
         return this;
     }

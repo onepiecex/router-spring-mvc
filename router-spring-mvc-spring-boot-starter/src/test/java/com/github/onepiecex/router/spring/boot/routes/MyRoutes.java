@@ -26,6 +26,6 @@ public class MyRoutes implements Routes {
                 .when(true,routeBuilder -> routeBuilder.POST(HelloController::hello))
                 .PUT(true,HelloController::hello);
 
-        router.route(true,"/hello2").GET(HelloController::hello);
+        router.route(true,"/hello3").GET(HelloController::hello);
     }
 }

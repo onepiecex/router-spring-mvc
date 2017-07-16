@@ -55,8 +55,11 @@ public class OnepiecexRequestMappingHandlerMapping extends RequestMappingHandler
                                         String[] produces) {
         if(handler==null || handler instanceof Class ||method==null|| path==null ||path.length==0 ||requestMethods==null ||requestMethods.length==0){
             StringBuilder err=new StringBuilder();
-            err.append("route can not install  mag:");
-            if(handler == null){
+            err.append("route can not install  mag(")
+                    .append(handler == null?"":handler.getClass().getName())
+                    .append(method==null?"":"."+method.getName())
+                    .append("):");
+            if(handler == null) {
                 err.append(" no obj");
             }
             if(handler instanceof Class){
