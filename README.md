@@ -6,7 +6,7 @@
     
 # 使用
 ## spring-boot
-```
+```xml
 <dependency>
     <groupId>com.github.onepiecex</groupId>
     <artifactId>router-spring-mvc-spring-boot-starter</artifactId>
