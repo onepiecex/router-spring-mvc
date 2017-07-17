@@ -1,8 +1,8 @@
 # router-spring-mvc
+思想来源于[ninjaframework](https://github.com/ninjaframework/ninja)
 
-    思想来源于[ninjaframework](https://github.com/ninjaframework/ninja)
-    将@Controller 、 @RequestMapping 、 @GetMapping 、 @PostMapping  等 替换为统一地方配置url
-    好处：统一地方管理url api
+    将@Controller 、 @RequestMapping 、 @GetMapping 、 @PostMapping  等
+    替换为统一地方管理、配置url
     
 # 使用
 ## spring-boot
