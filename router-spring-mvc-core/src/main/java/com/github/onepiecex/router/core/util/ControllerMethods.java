@@ -97,7 +97,27 @@ public class ControllerMethods {
     public interface ControllerMethod15<A,B,C,D,E,F,G,H,I,J,K,L,M,N,O> extends ControllerMethod {
         Object apply(A a, B b, C c, D d, E e, F f, G g, H h, I i, J j, K k, L l, M m, N n, O o) throws Exception;
     }
-    
+    @FunctionalInterface
+    public interface ControllerMethod16<A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P> extends ControllerMethod {
+        Object apply(A a, B b, C c, D d, E e, F f, G g, H h, I i, J j, K k, L l, M m, N n, O o,P p) throws Exception;
+    }
+    @FunctionalInterface
+    public interface ControllerMethod17<A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q> extends ControllerMethod {
+        Object apply(A a, B b, C c, D d, E e, F f, G g, H h, I i, J j, K k, L l, M m, N n, O o,P p,Q q) throws Exception;
+    }
+    @FunctionalInterface
+    public interface ControllerMethod18<A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R> extends ControllerMethod {
+        Object apply(A a, B b, C c, D d, E e, F f, G g, H h, I i, J j, K k, L l, M m, N n, O o,P p,Q q,R r) throws Exception;
+    }
+    @FunctionalInterface
+    public interface ControllerMethod19<A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S> extends ControllerMethod {
+        Object apply(A a, B b, C c, D d, E e, F f, G g, H h, I i, J j, K k, L l, M m, N n, O o,P p,Q q,R r,S s) throws Exception;
+    }
+    @FunctionalInterface
+    public interface ControllerMethod20<A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T> extends ControllerMethod {
+        Object apply(A a, B b, C c, D d, E e, F f, G g, H h, I i, J j, K k, L l, M m, N n, O o,P p,Q q,R r,S s,T t) throws Exception;
+    }
+
     // if you need more than 15 arguments then we recommend using the
     // legacy Class, methodName strategy
     
@@ -167,5 +187,20 @@ public class ControllerMethods {
     static public <A,B,C,D,E,F,G,H,I,J,K,L,M,N,O> ControllerMethod15<A,B,C,D,E,F,G,H,I,J,K,L,M,N,O> of(ControllerMethod15<A,B,C,D,E,F,G,H,I,J,K,L,M,N,O> functionalMethod) {
         return functionalMethod;
     }
-    
+    static public <A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P> ControllerMethod16<A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P> of(ControllerMethod16<A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P> functionalMethod) {
+        return functionalMethod;
+    }
+    static public <A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q> ControllerMethod17<A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q> of(ControllerMethod17<A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q> functionalMethod) {
+        return functionalMethod;
+    }
+    static public <A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R> ControllerMethod18<A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R> of(ControllerMethod18<A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R> functionalMethod) {
+        return functionalMethod;
+    }
+    static public <A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S> ControllerMethod19<A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S> of(ControllerMethod19<A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S> functionalMethod) {
+        return functionalMethod;
+    }
+    static public <A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T> ControllerMethod20<A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T> of(ControllerMethod20<A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T> functionalMethod) {
+        return functionalMethod;
+    }
+
 }

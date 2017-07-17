@@ -20,90 +20,180 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface RouteBuilderWithMETHODControllerMethod<T> extends RouteBuilderWithControllerMethod<T> {
 
 
-    default T METHOD(ControllerMethod0 controllerMethod,RequestMethod... requestMethod) {
-        return METHOD((ControllerMethod)controllerMethod,requestMethod);
+    default T METHOD(ControllerMethod0 controllerMethod,RequestMethod requestMethod,RequestMethod... requestMethods) {
+        return METHOD((ControllerMethod)controllerMethod,requestMethod,requestMethods);
     }
 
-    default <A> T METHOD( ControllerMethod1<A> controllerMethod,RequestMethod... requestMethod) {
-        return METHOD((ControllerMethod)controllerMethod,requestMethod);
+    default <A> T METHOD( ControllerMethod1<A> controllerMethod,RequestMethod requestMethod,RequestMethod... requestMethods) {
+        return METHOD((ControllerMethod)controllerMethod,requestMethod,requestMethods);
     }
 
-    default <A,B> T METHOD( ControllerMethod2<A, B> controllerMethod,RequestMethod... requestMethod) {
-        return METHOD((ControllerMethod)controllerMethod,requestMethod);
+    default <A,B> T METHOD( ControllerMethod2<A, B> controllerMethod,RequestMethod requestMethod,RequestMethod... requestMethods) {
+        return METHOD((ControllerMethod)controllerMethod,requestMethod,requestMethods);
     }
 
-    default <A,B,C> T METHOD( ControllerMethod3<A, B, C> controllerMethod,RequestMethod... requestMethod) {
-        return METHOD((ControllerMethod)controllerMethod,requestMethod);
+    default <A,B,C> T METHOD( ControllerMethod3<A, B, C> controllerMethod,RequestMethod requestMethod,RequestMethod... requestMethods) {
+        return METHOD((ControllerMethod)controllerMethod,requestMethod,requestMethods);
     }
 
-    default <A,B,C,D> T METHOD( ControllerMethod4<A, B, C, D> controllerMethod,RequestMethod... requestMethod) {
-        return METHOD((ControllerMethod)controllerMethod,requestMethod);
+    default <A,B,C,D> T METHOD( ControllerMethod4<A, B, C, D> controllerMethod,RequestMethod requestMethod,RequestMethod... requestMethods) {
+        return METHOD((ControllerMethod)controllerMethod,requestMethod,requestMethods);
     }
 
-    default <A,B,C,D,E> T METHOD( ControllerMethod5<A, B, C, D, E> controllerMethod,RequestMethod... requestMethod) {
-        return METHOD((ControllerMethod)controllerMethod,requestMethod);
+    default <A,B,C,D,E> T METHOD( ControllerMethod5<A, B, C, D, E> controllerMethod,RequestMethod requestMethod,RequestMethod... requestMethods) {
+        return METHOD((ControllerMethod)controllerMethod,requestMethod,requestMethods);
     }
 
-    default <A,B,C,D,E,F> T METHOD( ControllerMethod6<A, B, C, D, E, F> controllerMethod,RequestMethod... requestMethod) {
-        return METHOD((ControllerMethod)controllerMethod,requestMethod);
+    default <A,B,C,D,E,F> T METHOD( ControllerMethod6<A, B, C, D, E, F> controllerMethod,RequestMethod requestMethod,RequestMethod... requestMethods) {
+        return METHOD((ControllerMethod)controllerMethod,requestMethod,requestMethods);
     }
 
-    default <A,B,C,D,E,F,G> T METHOD( ControllerMethod7<A, B, C, D, E, F, G> controllerMethod,RequestMethod... requestMethod) {
-        return METHOD((ControllerMethod)controllerMethod,requestMethod);
+    default <A,B,C,D,E,F,G> T METHOD( ControllerMethod7<A, B, C, D, E, F, G> controllerMethod,RequestMethod requestMethod,RequestMethod... requestMethods) {
+        return METHOD((ControllerMethod)controllerMethod,requestMethod,requestMethods);
     }
 
-    default <A,B,C,D,E,F,G,H> T METHOD( ControllerMethod8<A, B, C, D, E, F, G, H> controllerMethod,RequestMethod... requestMethod) {
-        return METHOD((ControllerMethod)controllerMethod,requestMethod);
+    default <A,B,C,D,E,F,G,H> T METHOD( ControllerMethod8<A, B, C, D, E, F, G, H> controllerMethod,RequestMethod requestMethod,RequestMethod... requestMethods) {
+        return METHOD((ControllerMethod)controllerMethod,requestMethod,requestMethods);
     }
 
-    default <A,B,C,D,E,F,G,H,I> T METHOD( ControllerMethod9<A, B, C, D, E, F, G, H, I> controllerMethod,RequestMethod... requestMethod) {
-        return METHOD((ControllerMethod)controllerMethod,requestMethod);
+    default <A,B,C,D,E,F,G,H,I> T METHOD( ControllerMethod9<A, B, C, D, E, F, G, H, I> controllerMethod,RequestMethod requestMethod,RequestMethod... requestMethods) {
+        return METHOD((ControllerMethod)controllerMethod,requestMethod,requestMethods);
     }
 
-    default <A,B,C,D,E,F,G,H,I,J> T METHOD( ControllerMethod10<A, B, C, D, E, F, G, H, I, J> controllerMethod,RequestMethod... requestMethod) {
-        return METHOD((ControllerMethod)controllerMethod,requestMethod);
-    }
-    default T METHOD(boolean condition,ControllerMethod0 controllerMethod,RequestMethod... requestMethod) {
-        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethod);
+    default <A,B,C,D,E,F,G,H,I,J> T METHOD( ControllerMethod10<A, B, C, D, E, F, G, H, I, J> controllerMethod,RequestMethod requestMethod,RequestMethod... requestMethods) {
+        return METHOD((ControllerMethod)controllerMethod,requestMethod,requestMethods);
     }
 
-    default <A> T METHOD(boolean condition, ControllerMethod1<A> controllerMethod,RequestMethod... requestMethod) {
-        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethod);
+
+    default T METHOD(ControllerMethod0 controllerMethod,RequestMethod[] requestMethods) {
+        return METHOD((ControllerMethod)controllerMethod,requestMethods);
     }
 
-    default <A,B> T METHOD(boolean condition, ControllerMethod2<A, B> controllerMethod,RequestMethod... requestMethod) {
-        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethod);
+    default <A> T METHOD( ControllerMethod1<A> controllerMethod,RequestMethod[] requestMethods) {
+        return METHOD((ControllerMethod)controllerMethod,requestMethods);
     }
 
-    default <A,B,C> T METHOD(boolean condition, ControllerMethod3<A, B, C> controllerMethod,RequestMethod... requestMethod) {
-        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethod);
+    default <A,B> T METHOD( ControllerMethod2<A, B> controllerMethod,RequestMethod[] requestMethods) {
+        return METHOD((ControllerMethod)controllerMethod,requestMethods);
     }
 
-    default <A,B,C,D> T METHOD(boolean condition, ControllerMethod4<A, B, C, D> controllerMethod,RequestMethod... requestMethod) {
-        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethod);
+    default <A,B,C> T METHOD( ControllerMethod3<A, B, C> controllerMethod,RequestMethod[] requestMethods) {
+        return METHOD((ControllerMethod)controllerMethod,requestMethods);
     }
 
-    default <A,B,C,D,E> T METHOD(boolean condition, ControllerMethod5<A, B, C, D, E> controllerMethod,RequestMethod... requestMethod) {
-        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethod);
+    default <A,B,C,D> T METHOD( ControllerMethod4<A, B, C, D> controllerMethod,RequestMethod[] requestMethods) {
+        return METHOD((ControllerMethod)controllerMethod,requestMethods);
     }
 
-    default <A,B,C,D,E,F> T METHOD(boolean condition, ControllerMethod6<A, B, C, D, E, F> controllerMethod,RequestMethod... requestMethod) {
-        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethod);
+    default <A,B,C,D,E> T METHOD( ControllerMethod5<A, B, C, D, E> controllerMethod,RequestMethod[] requestMethods) {
+        return METHOD((ControllerMethod)controllerMethod,requestMethods);
     }
 
-    default <A,B,C,D,E,F,G> T METHOD(boolean condition, ControllerMethod7<A, B, C, D, E, F, G> controllerMethod,RequestMethod... requestMethod) {
-        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethod);
+    default <A,B,C,D,E,F> T METHOD( ControllerMethod6<A, B, C, D, E, F> controllerMethod,RequestMethod[] requestMethods) {
+        return METHOD((ControllerMethod)controllerMethod,requestMethods);
     }
 
-    default <A,B,C,D,E,F,G,H> T METHOD(boolean condition, ControllerMethod8<A, B, C, D, E, F, G, H> controllerMethod,RequestMethod... requestMethod) {
-        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethod);
+    default <A,B,C,D,E,F,G> T METHOD( ControllerMethod7<A, B, C, D, E, F, G> controllerMethod,RequestMethod[] requestMethods) {
+        return METHOD((ControllerMethod)controllerMethod,requestMethods);
     }
 
-    default <A,B,C,D,E,F,G,H,I> T METHOD(boolean condition, ControllerMethod9<A, B, C, D, E, F, G, H, I> controllerMethod,RequestMethod... requestMethod) {
-        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethod);
+    default <A,B,C,D,E,F,G,H> T METHOD( ControllerMethod8<A, B, C, D, E, F, G, H> controllerMethod,RequestMethod[] requestMethods) {
+        return METHOD((ControllerMethod)controllerMethod,requestMethods);
     }
 
-    default <A,B,C,D,E,F,G,H,I,J> T METHOD(boolean condition, ControllerMethod10<A, B, C, D, E, F, G, H, I, J> controllerMethod,RequestMethod... requestMethod) {
-        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethod);
+    default <A,B,C,D,E,F,G,H,I> T METHOD( ControllerMethod9<A, B, C, D, E, F, G, H, I> controllerMethod,RequestMethod[] requestMethods) {
+        return METHOD((ControllerMethod)controllerMethod,requestMethods);
+    }
+
+    default <A,B,C,D,E,F,G,H,I,J> T METHOD( ControllerMethod10<A, B, C, D, E, F, G, H, I, J> controllerMethod,RequestMethod[] requestMethods) {
+        return METHOD((ControllerMethod)controllerMethod,requestMethods);
+    }
+    
+    default T METHOD(boolean condition,ControllerMethod0 controllerMethod,RequestMethod requestMethod,RequestMethod... requestMethods) {
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethod,requestMethods);
+    }
+
+    default <A> T METHOD(boolean condition, ControllerMethod1<A> controllerMethod,RequestMethod requestMethod,RequestMethod... requestMethods) {
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethod,requestMethods);
+    }
+
+    default <A,B> T METHOD(boolean condition, ControllerMethod2<A, B> controllerMethod,RequestMethod requestMethod,RequestMethod... requestMethods) {
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethod,requestMethods);
+    }
+
+    default <A,B,C> T METHOD(boolean condition, ControllerMethod3<A, B, C> controllerMethod,RequestMethod requestMethod,RequestMethod... requestMethods) {
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethod,requestMethods);
+    }
+
+    default <A,B,C,D> T METHOD(boolean condition, ControllerMethod4<A, B, C, D> controllerMethod,RequestMethod requestMethod,RequestMethod... requestMethods) {
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethod,requestMethods);
+    }
+
+    default <A,B,C,D,E> T METHOD(boolean condition, ControllerMethod5<A, B, C, D, E> controllerMethod,RequestMethod requestMethod,RequestMethod... requestMethods) {
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethod,requestMethods);
+    }
+
+    default <A,B,C,D,E,F> T METHOD(boolean condition, ControllerMethod6<A, B, C, D, E, F> controllerMethod,RequestMethod requestMethod,RequestMethod... requestMethods) {
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethod,requestMethods);
+    }
+
+    default <A,B,C,D,E,F,G> T METHOD(boolean condition, ControllerMethod7<A, B, C, D, E, F, G> controllerMethod,RequestMethod requestMethod,RequestMethod... requestMethods) {
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethod,requestMethods);
+    }
+
+    default <A,B,C,D,E,F,G,H> T METHOD(boolean condition, ControllerMethod8<A, B, C, D, E, F, G, H> controllerMethod,RequestMethod requestMethod,RequestMethod... requestMethods) {
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethod,requestMethods);
+    }
+
+    default <A,B,C,D,E,F,G,H,I> T METHOD(boolean condition, ControllerMethod9<A, B, C, D, E, F, G, H, I> controllerMethod,RequestMethod requestMethod,RequestMethod... requestMethods) {
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethod,requestMethods);
+    }
+
+    default <A,B,C,D,E,F,G,H,I,J> T METHOD(boolean condition, ControllerMethod10<A, B, C, D, E, F, G, H, I, J> controllerMethod,RequestMethod requestMethod,RequestMethod... requestMethods) {
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethod,requestMethods);
+    }
+
+    default T METHOD(boolean condition,ControllerMethod0 controllerMethod,RequestMethod[] requestMethods) {
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethods);
+    }
+
+    default <A> T METHOD(boolean condition, ControllerMethod1<A> controllerMethod,RequestMethod[] requestMethods) {
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethods);
+    }
+
+    default <A,B> T METHOD(boolean condition, ControllerMethod2<A, B> controllerMethod,RequestMethod[] requestMethods) {
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethods);
+    }
+
+    default <A,B,C> T METHOD(boolean condition, ControllerMethod3<A, B, C> controllerMethod,RequestMethod[] requestMethods) {
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethods);
+    }
+
+    default <A,B,C,D> T METHOD(boolean condition, ControllerMethod4<A, B, C, D> controllerMethod,RequestMethod[] requestMethods) {
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethods);
+    }
+
+    default <A,B,C,D,E> T METHOD(boolean condition, ControllerMethod5<A, B, C, D, E> controllerMethod,RequestMethod[] requestMethods) {
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethods);
+    }
+
+    default <A,B,C,D,E,F> T METHOD(boolean condition, ControllerMethod6<A, B, C, D, E, F> controllerMethod,RequestMethod[] requestMethods) {
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethods);
+    }
+
+    default <A,B,C,D,E,F,G> T METHOD(boolean condition, ControllerMethod7<A, B, C, D, E, F, G> controllerMethod,RequestMethod[] requestMethods) {
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethods);
+    }
+
+    default <A,B,C,D,E,F,G,H> T METHOD(boolean condition, ControllerMethod8<A, B, C, D, E, F, G, H> controllerMethod,RequestMethod[] requestMethods) {
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethods);
+    }
+
+    default <A,B,C,D,E,F,G,H,I> T METHOD(boolean condition, ControllerMethod9<A, B, C, D, E, F, G, H, I> controllerMethod,RequestMethod[] requestMethods) {
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethods);
+    }
+
+    default <A,B,C,D,E,F,G,H,I,J> T METHOD(boolean condition, ControllerMethod10<A, B, C, D, E, F, G, H, I, J> controllerMethod,RequestMethod[] requestMethods) {
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethods);
     }
 }

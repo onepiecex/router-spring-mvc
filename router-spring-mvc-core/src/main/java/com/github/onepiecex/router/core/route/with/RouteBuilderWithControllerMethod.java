@@ -8,8 +8,14 @@ import com.github.onepiecex.router.core.route.RouteMapping;
 import com.github.onepiecex.router.core.util.ControllerMethods.ControllerMethod;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-public interface RouteBuilderWithControllerMethod<T> {
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
+public interface RouteBuilderWithControllerMethod<T> {
+    default RequestMethod[] allRequestMethod(){
+        return RequestMethod.values();
+    }
     /**
      * @param controllerMethod   see ControllerMethods.of(CLASS::METHOD)
      *   注 ：
@@ -34,12 +40,34 @@ public interface RouteBuilderWithControllerMethod<T> {
              String[] produces){
         return METHOD(true,(ControllerMethod)controllerMethod,requestMethod,name,params,headers,consumes,produces);
     }
-
-    default T METHOD(boolean condition,ControllerMethod controllerMethod, RequestMethod... requestMethod){
-        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethod,null,null,null,null,null);
+    default T METHOD(ControllerMethod controllerMethod, RequestMethod requestMethod,
+             String name,
+             String[] params,
+             String[] headers,
+             String[] consumes,
+             String[] produces){
+        return METHOD(true,(ControllerMethod)controllerMethod,new RequestMethod[]{requestMethod},name,params,headers,consumes,produces);
     }
-    default T METHOD(ControllerMethod controllerMethod, RequestMethod... requestMethod){
-        return METHOD(true,(ControllerMethod)controllerMethod,requestMethod);
+    default T METHOD(boolean condition,ControllerMethod controllerMethod,RequestMethod[] requestMethods){
+
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethods,null,null,null,null,null);
+    }
+
+    default T METHOD(boolean condition,ControllerMethod controllerMethod,RequestMethod  requestMethod,RequestMethod... requestMethods){
+        List<RequestMethod> requestMethodList=new ArrayList<>();
+        requestMethodList.add(requestMethod);
+        if(requestMethods!=null) {
+            requestMethodList.addAll(Arrays.asList(requestMethods));
+        }
+
+        return METHOD(condition,(ControllerMethod)controllerMethod,requestMethodList.toArray( new RequestMethod[requestMethodList.size()]));
+    }
+
+    default T METHOD(ControllerMethod controllerMethod,RequestMethod  requestMethod, RequestMethod... requestMethods){
+        return METHOD(true,(ControllerMethod)controllerMethod,requestMethod,requestMethods);
+    }
+    default T METHOD(ControllerMethod controllerMethod, RequestMethod[] requestMethods){
+        return METHOD(true,(ControllerMethod)controllerMethod,requestMethods);
     }
 
 
