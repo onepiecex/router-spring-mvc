@@ -48,5 +48,7 @@ public class MyRoutes implements Routes {
         router.route("/hello2/hello").POST(HelloController::hello2);
     }
 }
-//其他 route 示例 见 MyRoutes.java
 ```
+更多 route 示例 见 [MyRoutes.java](https://github.com/onepiecex/router-spring-mvc/blob/master/router-spring-mvc-spring-boot-starter/src/test/java/com/github/onepiecex/router/spring/boot/routes/MyRoutes.java)
+
+
