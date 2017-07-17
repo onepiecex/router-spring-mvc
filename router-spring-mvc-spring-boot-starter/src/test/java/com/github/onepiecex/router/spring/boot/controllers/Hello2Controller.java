@@ -18,10 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by xiong on 2017-07-14.
  */
 @RestController("/hello2")
-
 public class Hello2Controller {
     @GetMapping
     public String hello() {
+        return "hello";
+    }
+    @GetMapping("/hello")
+    public String hello2() {
         return "hello";
     }
 }

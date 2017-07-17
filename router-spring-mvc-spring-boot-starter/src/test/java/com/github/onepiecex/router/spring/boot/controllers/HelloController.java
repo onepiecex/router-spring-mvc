@@ -11,8 +11,6 @@
 
 package com.github.onepiecex.router.spring.boot.controllers;
 
-import com.github.onepiecex.router.core.route.RouteMapping;
-
 /**
  * Created by xiong on 2017-07-14.
  */
@@ -20,7 +18,6 @@ public class HelloController {
     public String hello() {
         return "hello";
     }
-    @RouteMapping
     public String hello2() {
         return "hello";
     }

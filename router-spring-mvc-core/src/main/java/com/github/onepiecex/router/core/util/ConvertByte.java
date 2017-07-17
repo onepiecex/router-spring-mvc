@@ -17,8 +17,8 @@ public class ConvertByte {
             e.printStackTrace();
         } finally {
             try {
-                oos.close();
                 baos.close();
+                oos.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -37,8 +37,8 @@ public class ConvertByte {
             e.printStackTrace();
         } finally{
             try {
-                objectInputStream.close();
                 byteArrayInputStream.close();
+                objectInputStream.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
