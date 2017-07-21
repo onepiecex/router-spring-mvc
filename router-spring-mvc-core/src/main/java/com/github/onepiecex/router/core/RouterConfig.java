@@ -51,14 +51,14 @@ public class RouterConfig extends WebMvcConfigurationSupport {
                     .append("  packages: package1,package2");
 
 
-         /*   LOG.error(stringBuilder.toString());
 
-            LOG.error("route.packages not configured , Please configure it in the application.yaml file");
+            LOG.error("route.packages not configured , Please configure it in the application.yaml file (route.packages没有配置，请在 application.yaml 配置，配置如下)");
             LOG.error("for example :");
             LOG.error("route:");
-            LOG.error("  packages: package1,package2");*/
+            LOG.error("  packages: package1,package2");
 
             throw new RuntimeException(stringBuilder.toString());
+           // return handlerMapping;
         }
 
         Router router = getBaan(Router.class,RouterImpl.class);
