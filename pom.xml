@@ -48,7 +48,7 @@
         <spring.boot.version>1.5.3.RELEASE</spring.boot.version>
         <nekohtml.version>1.9.22</nekohtml.version>
         <router.core.version>1.0</router.core.version>
-        <annotation.detector.version>3.0.5</annotation.detector.version>
+        <reflections.version>0.9.11</reflections.version>
 
     </properties>
 
@@ -128,11 +128,10 @@
                 <version>${nekohtml.version}</version>
                 <scope>provided</scope>
             </dependency>
-
             <dependency>
-                <groupId>eu.infomas</groupId>
-                <artifactId>annotation-detector</artifactId>
-                <version>${annotation.detector.version}</version>
+                <groupId>org.reflections</groupId>
+                <artifactId>reflections</artifactId>
+                <version>${reflections.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.onepiecex</groupId>

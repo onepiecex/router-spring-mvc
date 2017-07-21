@@ -6,12 +6,18 @@
     
 # 使用
 ## spring-boot
+###### maven:
 ```xml
 <dependency>
     <groupId>com.github.onepiecex</groupId>
     <artifactId>router-spring-mvc-spring-boot-starter</artifactId>
     <version>1.0</version>
 </dependency>
+```
+###### application.yaml:
+```yaml
+route:
+  packages: package1,package2
 ```
 # 示例
 ### 常规Controller

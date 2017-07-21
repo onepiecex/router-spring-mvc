@@ -17,13 +17,13 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Created by xiong on 2017-07-14.
  */
-@RestController("/hello2")
+@RestController("/hello111")
 public class Hello2Controller {
     @GetMapping
     public String hello() {
         return "hello";
     }
-    @GetMapping("/hello")
+    @GetMapping("/hello222")
     public String hello2() {
         return "hello";
     }

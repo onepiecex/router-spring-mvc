@@ -1,0 +1,2 @@
+route:
+  packages: com.github.onepiecex.router.spring.boot.routes,com.github.onepiecex.router.spring.boot.routes
