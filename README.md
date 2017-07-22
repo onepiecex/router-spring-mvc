@@ -14,7 +14,7 @@
     <version>1.0</version>
 </dependency>
 ```
-###### application.yaml:
+###### application.yaml:(配置 com.github.onepiecex.router.core.route.Routes 的实现类的包)
 ```yaml
 route:
   packages: package1,package2
@@ -35,8 +35,8 @@ public class Hello2Controller {
 }
 ```
 ### 本实例（等同于常规Controller）
+###### Controller:
 ```java
-//Controller
 public class HelloController {
     public String hello() {
         return "hello";
@@ -45,8 +45,9 @@ public class HelloController {
         return "hello";
     }
 }
-
-//Routes
+```
+###### Routes:
+```java
 public class MyRoutes implements Routes {
     @Override
     public void init(Router router) {
