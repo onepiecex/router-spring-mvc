@@ -12,7 +12,7 @@
 package com.github.onepiecex.router.spring.boot.routes;
 
 import com.github.router.core.route.Router;
-import com.github.router.core.route.Routes;
+import com.github.router.core.route.ApplicationRoutes;
 import com.github.router.core.util.ControllerMethods;
 import com.github.onepiecex.router.spring.boot.controllers.HelloController;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 /**
  * Created by xiong on 2017-07-14.
  */
-public class MyRoutes implements Routes {
+public class MyRoutes implements ApplicationRoutes {
     @Override
     public void init(Router router) {
 
