@@ -27,10 +27,6 @@
         </dependency>
 
         <dependency>
-            <groupId>eu.infomas</groupId>
-            <artifactId>annotation-detector</artifactId>
-        </dependency>
-        <dependency>
             <groupId>com.github.onepiecex</groupId>
             <artifactId>router-spring-mvc-core</artifactId>
         </dependency>

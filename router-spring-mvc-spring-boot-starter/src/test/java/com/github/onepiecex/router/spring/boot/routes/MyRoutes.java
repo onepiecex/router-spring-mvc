@@ -11,9 +11,9 @@
 
 package com.github.onepiecex.router.spring.boot.routes;
 
-import com.github.onepiecex.router.core.route.Router;
-import com.github.onepiecex.router.core.route.Routes;
-import com.github.onepiecex.router.core.util.ControllerMethods;
+import com.github.router.core.route.Router;
+import com.github.router.core.route.Routes;
+import com.github.router.core.util.ControllerMethods;
 import com.github.onepiecex.router.spring.boot.controllers.HelloController;
 import org.springframework.web.bind.annotation.RequestMethod;
 

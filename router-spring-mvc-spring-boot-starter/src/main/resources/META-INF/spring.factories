@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.github.onepiecex.router.spring.boot.starter.SpringRouterConfig
+com.github.router.spring.boot.starter.SpringRouterConfig

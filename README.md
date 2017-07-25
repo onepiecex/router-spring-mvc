@@ -14,7 +14,7 @@
     <version>1.0</version>
 </dependency>
 ```
-###### application.yaml:(配置 com.github.onepiecex.router.core.route.Routes 的实现类的包)
+###### application.yaml:(配置 Routes 的实现类的包)
 ```yaml
 route:
   packages: package1,package2

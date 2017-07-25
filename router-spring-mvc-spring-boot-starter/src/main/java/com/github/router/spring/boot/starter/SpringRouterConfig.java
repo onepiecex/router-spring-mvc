@@ -9,11 +9,12 @@
  *  with meicanyun.com.
  */
 
-package com.github.onepiecex.router.core.route;
+package com.github.router.spring.boot.starter;
+
+import com.github.router.core.RouterConfig;
 
 /**
  * Created by xiong on 2017-07-14.
  */
-public interface  Routes {
-    void init(Router router);
+public class SpringRouterConfig extends RouterConfig {
 }

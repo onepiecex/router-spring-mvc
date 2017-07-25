@@ -83,6 +83,7 @@
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>${slf4j.version}</version>
+                <scope>provided</scope>
             </dependency>
 
             <dependency>
@@ -228,8 +229,6 @@
     </profiles>
 
     <modules>
-     <!--   <module>onepiecex-session-share-core</module>
-        <module>onepiecex-session-share-spring-boot-starter</module>-->
         <module>router-spring-mvc-spring-boot-starter</module>
         <module>router-spring-mvc-core</module>
     </modules>
