@@ -37,6 +37,7 @@ public class Hello2Controller {
 ### 本实例（等同于常规Controller）
 ###### Controller:
 ```java
+@RestController
 public class HelloController {
     public String hello() {
         return "hello";
