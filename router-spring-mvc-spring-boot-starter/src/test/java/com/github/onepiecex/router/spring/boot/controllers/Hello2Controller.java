@@ -11,6 +11,7 @@
 
 package com.github.onepiecex.router.spring.boot.controllers;
 
+import com.github.onepiecex.router.spring.boot.auth.Auth;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController("/hello111")
 public class Hello2Controller {
     @GetMapping
+    @Auth
     public String hello() {
         return "hello";
     }

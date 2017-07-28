@@ -11,10 +11,15 @@
 
 package com.github.onepiecex.router.spring.boot.controllers;
 
+import com.github.onepiecex.router.spring.boot.auth.Auth;
+import org.springframework.web.bind.annotation.RestController;
+
 /**
  * Created by xiong on 2017-07-14.
  */
+@RestController
 public class HelloController {
+    @Auth
     public String hello() {
         return "hello";
     }

@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.springframework.util.StringUtils;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
+import org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
 import java.util.Set;
@@ -24,7 +24,7 @@ import java.util.Set;
  * Created by wangziqing on 17/7/4.
  */
 @Configuration
-public class RouterConfig extends WebMvcConfigurationSupport {
+public class RouterConfig extends DelegatingWebMvcConfiguration {
     @Autowired
     private ApplicationContext applicationContext;
 
